@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | K Capital</title>
+  <meta name="description" content="An initial conversation is enough to understand where the project or transaction stands and what financing question needs to be solved.">
+
+  <!-- Сайт закрыт от поисковиков (ещё robots.txt). Открывать только по просьбе Тимура. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="K Capital">
+  <meta property="og:title" content="Contact | K Capital">
+  <meta property="og:description" content="Start with a conversation.">
+  <meta name="theme-color" content="#FBFCFC">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ====================== Шапка (одинаковая на всех страницах) ======================
+       Меняешь пункт меню или кнопку — поменяй во всех файлах *.html.
+       aria-current="page" стоит у пункта текущей страницы (в обоих меню).
+       Ссылка кнопки Discuss your project задаётся в script.js (bookingUrl). -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html"><img src="assets/img/kcapital-logo.svg" alt="K Capital" width="845" height="216"></a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="advisory.html">Advisory</a>
+        <a href="financing.html">Financing Solutions</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="btn btn--solid btn--sm nav__cta" href="contact.html" data-booking>Discuss your project</a>
+      <details class="menu">
+        <summary class="menu__toggle"><span class="menu__icon" aria-hidden="true"></span>Menu</summary>
+        <nav class="menu__panel" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="financing.html">Financing Solutions</a>
+          <a href="experience.html">Experience</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+          <a class="btn btn--solid" href="contact.html" data-booking>Discuss your project</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ====================== 1. Hero ====================== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1 class="page-hero__title">Start with a conversation</h1>
+        <p class="page-hero__lead">An initial conversation is enough to understand where the project or transaction stands and what financing question needs to be solved. If you already have a presentation, model or other project materials, we are happy to review them beforehand. There is no need to prepare anything specifically for the call.</p>
+      </div>
+    </section>
+
+    <!-- ====================== 2. Контакты и что прислать (тёмный блок) ======================
+         Почта и ссылка на календарь задаются в script.js (адрес собирается скриптом от спам-ботов).
+         На телефоне контакты идут первыми, сразу после hero. -->
+    <section class="section section--dark" id="details">
+      <div class="container split split--loose">
+        <div>
+          <h2 class="list-title">Contact</h2>
+          <div class="contact-card">
+            <p class="contact-card__name">Timur Khairetdinov</p>
+            <p>Founder and CEO</p>
+            <p><a data-email data-email-text href="#details">tk [at] kcapital.pro</a></p>
+            <p><a href="https://www.linkedin.com/in/timur-khairetdinov/" rel="noopener">LinkedIn</a></p>
+            <p>Dubai, United Arab Emirates</p>
+          </div>
+          <div class="btns">
+            <a class="btn btn--light" href="#details" data-booking>Discuss your project</a>
+          </div>
+        </div>
+
+        <div class="prose">
+          <h2 class="list-title">Useful if already available</h2>
+          <ul class="list">
+            <li>A project presentation or short summary.</li>
+            <li>The financial model in its current form.</li>
+            <li>The current project structure, key counterparties, commercial arrangements and permits.</li>
+            <li>Any material already shared with lenders, or feedback received from them.</li>
+          </ul>
+          <p>These materials are helpful, not required.</p>
+          <h2 class="list-title">Confidentiality</h2>
+          <p>Anything you share is treated as confidential. K Capital is happy to sign an NDA before reviewing project materials.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== Подвал (одинаковый на всех страницах) ====================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="brand brand--footer"><img src="assets/img/kcapital-logo-white.svg" alt="K Capital" width="845" height="216"></p>
+      <p>Dubai, United Arab Emirates</p>
+      <p><a data-email data-email-text href="contact.html">tk [at] kcapital.pro</a></p>
+      <p><a href="https://www.linkedin.com/in/timur-khairetdinov/" rel="noopener">LinkedIn</a></p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+      <p class="footer__copy">&copy; <span id="year">2026</span> K Capital</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

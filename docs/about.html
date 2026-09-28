@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About K Capital</title>
+  <meta name="description" content="K Capital is an independent financial advisory boutique based in Dubai. Founded in 2023, the firm advises on project, structured, ECA-backed and other debt financings for complex projects, assets and transactions.">
+
+  <!-- Сайт закрыт от поисковиков (ещё robots.txt). Открывать только по просьбе Тимура. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="K Capital">
+  <meta property="og:title" content="About K Capital">
+  <meta property="og:description" content="Independent debt advisory grounded in lender and transaction experience.">
+  <meta name="theme-color" content="#FBFCFC">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ====================== Шапка (одинаковая на всех страницах) ======================
+       Меняешь пункт меню или кнопку — поменяй во всех файлах *.html.
+       aria-current="page" стоит у пункта текущей страницы (в обоих меню).
+       Ссылка кнопки Discuss your project задаётся в script.js (bookingUrl). -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html"><img src="assets/img/kcapital-logo.svg" alt="K Capital" width="845" height="216"></a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="advisory.html">Advisory</a>
+        <a href="financing.html">Financing Solutions</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn--solid btn--sm nav__cta" href="contact.html" data-booking>Discuss your project</a>
+      <details class="menu">
+        <summary class="menu__toggle"><span class="menu__icon" aria-hidden="true"></span>Menu</summary>
+        <nav class="menu__panel" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="advisory.html">Advisory</a>
+          <a href="financing.html">Financing Solutions</a>
+          <a href="experience.html">Experience</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn--solid" href="contact.html" data-booking>Discuss your project</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <!-- В документе VER 6 две страницы «About K Capital»: Page 2 (письмо основателя от первого лица)
+       и Page 6 (о компании и биография). Здесь они собраны в одну страницу:
+       hero и биография из Page 6, затем письмо из Page 2, затем остальное из Page 6. -->
+  <main id="main">
+
+    <!-- ====================== 1. Hero (Page 6) ====================== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About K Capital</p>
+        <h1 class="page-hero__title">Independent debt advisory grounded in lender and transaction experience</h1>
+        <p class="page-hero__lead">K Capital is an independent financial advisory boutique based in Dubai. Founded in 2023, the firm advises on project, structured, ECA-backed and other debt financings for complex projects, assets and transactions.</p>
+      </div>
+    </section>
+
+    <!-- ====================== 2. Founder (Page 6) ======================
+         Фото: те же файлы, что на главной. -->
+    <section class="section" id="founder">
+      <div class="container about">
+        <aside class="about__person">
+          <div class="about__photo"><img src="assets/img/timur-480.jpg" srcset="assets/img/timur-240.jpg 240w, assets/img/timur-480.jpg 480w" sizes="(min-width: 980px) 220px, 96px" alt="Timur Khairetdinov" width="480" height="480" decoding="async"></div>
+          <p class="about__name">Timur Khairetdinov</p>
+          <p class="about__role">Founder and CEO</p>
+        </aside>
+        <div class="about__body">
+          <h2 class="eyebrow">Founder</h2>
+          <p class="lead">Timur has more than twenty years of experience in project, structured and export finance across banking, export credit, corporate finance advisory and debt arranging.</p>
+          <div class="roles">
+            <article class="role">
+              <h3>Banking</h3>
+              <p>He held senior project and structured finance roles at a state development bank and a major commercial bank, originating, structuring and executing financings in oil and gas, energy, infrastructure, aviation and shipping. His transaction experience includes LNG, gas processing, refining, petrochemicals and fertiliser projects.</p>
+            </article>
+            <article class="role">
+              <h3>Export credit</h3>
+              <p>He led project and structured finance at an export credit agency, developing the practice and working closely with leading Asian and European ECAs and commercial banks as co-financiers in syndicated cross-border transactions.</p>
+            </article>
+            <article class="role">
+              <h3>Advisory</h3>
+              <p>His advisory experience includes corporate finance at a Big Four firm and an independent advisory boutique, covering capital projects, debt and equity raising, transport infrastructure, public-private partnerships, cross-border investment structuring and debt settlements.</p>
+            </article>
+            <article class="role">
+              <h3>Arranging</h3>
+              <p>He has also acted as mandated lead arranger on project financing co-arranged with major European banks.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 3. Письмо основателя (Page 2) ======================
+         Жирные фразы документа оформлены классом emph. Подпись собрана из имени и должности. -->
+    <section class="section section--alt" id="letter">
+      <div class="container split">
+        <h2 class="h2 sticky">Capital is rarely the constraint. Bankability usually is</h2>
+        <div class="prose">
+          <p>A strong commercial case does not automatically make a project financeable. Lenders, ECAs and DFIs look at the same transaction through different mandates, credit frameworks, priorities and constraints. A financing strategy needs to work across those perspectives.</p>
+          <p>I have spent more than twenty years on different sides of that process: inside commercial and development banking, at a national export credit agency, as a financial adviser and as a mandated lead arranger.</p>
+          <p>That combination matters because it allows me to look at a project from more than one angle.</p>
+          <p>I understand how lenders analyse risk, build a credit case and take decisions through internal approval processes. I also bring first-hand export credit experience and extensive transaction experience working with ECAs, policy banks and development finance institutions, with an understanding of how their mandates, eligibility criteria, country and sector priorities, risk appetite and institutional constraints shape financing decisions.</p>
+          <p>On the client side, that translates into a practical advantage: anticipating the questions different institutions are likely to ask, identifying issues before they become obstacles, distinguishing financing routes that are realistically available from those that are not, and shaping the project and financing strategy accordingly.</p>
+          <p>My advisory and arranging experience adds the execution perspective: how to position a transaction, approach institutions in the right sequence, interpret their feedback, reconcile different requirements and keep the financing process moving towards approval and close.</p>
+          <p class="emph">I founded K Capital to help clients turn complex projects into credible, financeable transactions and carry them through to execution.</p>
+          <p>K Capital is an independent adviser focused on debt financing for complex projects, assets and transactions. We help clients determine:</p>
+          <ul class="ticks">
+            <li>whether a project is financeable in its current form;</li>
+            <li>which financing routes are genuinely realistic;</li>
+            <li>what needs to change before approaching the market; and</li>
+            <li>how to structure and execute the financing process.</li>
+          </ul>
+          <p>We can become involved early, while there is still room to shape the project around financing requirements, or step into a live process where lenders are already engaged.</p>
+          <p>K Capital is deliberately senior-led. I remain directly involved throughout each mandate, bringing in specialist expertise where the transaction requires it.</p>
+          <p class="emph">The objective is to see the transaction as financing institutions will see it, before they do, and use that perspective to improve the client's path to financing.</p>
+          <p class="signature"><span class="signature__name">Timur Khairetdinov</span><span class="signature__role">Founder and CEO</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== 4. How K Capital works, Markets and sectors (Page 6) ====================== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="points">
+          <article class="point">
+            <h2 class="h3">How K Capital works</h2>
+            <p>K Capital can advise on a defined financing question or work alongside the client team from project development through financial close.</p>
+            <p>The scope is tailored to the stage of the transaction and the decisions needed to move it forward.</p>
+          </article>
+          <article class="point">
+            <h2 class="h3">Markets and sectors</h2>
+            <p>K Capital focuses on the Middle East, Africa, Eastern Europe and Asia, including Central Asia. The founder's transaction experience also includes Latin America. Core sectors include energy, oil and gas, natural resources, infrastructure, transport and industrial projects.</p>
+          </article>
+        </div>
+        <div class="btns">
+          <a class="btn btn--solid" href="contact.html" data-booking>Discuss your project</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== Подвал (одинаковый на всех страницах) ====================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="brand brand--footer"><img src="assets/img/kcapital-logo-white.svg" alt="K Capital" width="845" height="216"></p>
+      <p>Dubai, United Arab Emirates</p>
+      <p><a data-email data-email-text href="contact.html">tk [at] kcapital.pro</a></p>
+      <p><a href="https://www.linkedin.com/in/timur-khairetdinov/" rel="noopener">LinkedIn</a></p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+      <p class="footer__copy">&copy; <span id="year">2026</span> K Capital</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

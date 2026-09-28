@@ -1,0 +1,42 @@
+# Выкладка сайта (папка docs/) на GitHub Pages после каждого изменения в main,
+# то есть после принятой правки. Можно запустить и вручную: Actions, Publish site, Run workflow.
+# Перед выкладкой сайт ещё раз проверяется: сломанный сайт не публикуется.
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install browser
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Check site
+        run: python tools/check.py --browser
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4

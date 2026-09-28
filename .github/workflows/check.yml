@@ -1,0 +1,45 @@
+# Каждая правка сайта (pull request от Codex) проходит автопроверку.
+# Зелёная галочка в pull request: можно принимать (Merge pull request).
+# Красный крестик: в pull request появляется комментарий со списком ошибок, принимать не надо.
+name: Check site
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: check-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install browser
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Check site
+        run: python tools/check.py --browser 2>&1 | tee check.log; exit ${PIPESTATUS[0]}
+      - name: Report failure in the pull request
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          {
+            echo "Автопроверка нашла ошибки, эту правку не принимай. Попроси Codex их исправить."
+            echo
+            echo '```'
+            cat check.log 2>/dev/null || echo "Подробности в логе проверки."
+            echo '```'
+          } > comment.md
+          gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md
